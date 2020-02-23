@@ -1,0 +1,51 @@
+Spring MVC used design pattern front-controller pattern
+LoginController or Handler =>
+
+
+view resolver in 
+
+URL -> Dispacther -> Controller -> model -> Dispacther -> model -> ViewResolver -> Dispacther -> returns response
+
+autowiring and dependency management
+Component-scan scans components like service, controller etc in defined base-package
+
+model 1 arch: JSP based (no Servlets)
+
+Model 2 arch: MVC 
+Model - Value Objects. This gets passed to View. They are also called business objects
+View - Jsp : uses expression language. Should not use scriptlet <%= %>
+controller - Servlets: get data and populate the model. Data can be fetched from DB or session and populated to VO
+
+
+modified - MVC
+Front Controller (Dispacther) 
+	- every request goes to Dispacther servlet
+	- it decides which controller to be called
+	- 
+
+Features of Spring:
+component scan
+Autowiring
+
+Dependency injection comes from Core Container module,  Container module also does internationalization , resource bundle, properties file loading
+Spring beans - manages the life-cycle of beans - BeanFactory
+Application-context - 
+
+ORM - Hibernate
+OXM - object xml mapping
+
+AOP - Aspect orient programming - intercept the call and do additional work
+
+
+JSTL tags JSP standard tag library
+Core tags	The JSTL core tag provide variable support, URL management, flow control, etc. The URL for the core tag is http://java.sun.com/jsp/jstl/core. The prefix of core tag is c.
+Function tags	The functions tags provide support for string manipulation and string length. The URL for the functions tags is http://java.sun.com/jsp/jstl/functions and prefix is fn.
+Formatting tags	The Formatting tags provide support for message formatting, number and date formatting, etc. The URL for the Formatting tags is http://java.sun.com/jsp/jstl/fmt and prefix is fmt.
+XML tags	The XML tags provide flow control, transformation, etc. The URL for the XML tags is http://java.sun.com/jsp/jstl/xml and prefix is x.
+SQL tags	The JSTL SQL tags provide SQL support. The URL for the SQL tags is http://java.sun.com/jsp/jstl/sql and prefix is sql.
+
+
+Bootstrap - UI for Responsive HTML5
+Bootstrap uses jquery
+
+
