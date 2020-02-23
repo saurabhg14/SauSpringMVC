@@ -29,6 +29,7 @@ public class WelcomeController {
 		if(principal instanceof UserDetails)
 		{
 			model.addAttribute("name", ((UserDetails) principal).getUsername().concat(" (Get-Principal)"));
+			model.addAttribute("activeLogin", "active");
 		}
 		return "welcome";
 	}
