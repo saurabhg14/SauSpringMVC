@@ -53,7 +53,8 @@ public class TaskController {
 	}
 	
 	@RequestMapping(value = "/searchTaskForm", method = RequestMethod.GET)
-	public String searchTaskForm() {
+	public String searchTaskForm(ModelMap model) {
+		model.addAttribute("activeLogin", "active");
 		return "searchTasks";
 	}
 
@@ -65,6 +66,7 @@ public class TaskController {
 		model.addAttribute("taskName", taskName);
 		model.addAttribute("taskCount", tasks.size());
 		model.addAttribute("tasks", tasks);
+		model.addAttribute("activeLogin", "active");
 		//throw new Exception("Exception rendering task list");
 		return "taskList";
 	}
@@ -72,6 +74,7 @@ public class TaskController {
 	@RequestMapping(value = "/addTaskForm", method = RequestMethod.GET)
 	public String addTaskForm(ModelMap model) {
 		model.addAttribute("taskVO", new TaskVO(0, "Spring MVC", "", new Date(), true));
+		model.addAttribute("activeLogin", "active");
 		return "addTaskForm";
 	}
 
